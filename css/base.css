@@ -3,7 +3,7 @@
    Loosely based on the BeyondMeBtw design system
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Delius&family=Inter:wght@600;700;800&family=Kavoon&family=Kreon:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@600;700;800&family=Kreon:wght@300..700&display=swap');
 
 :root {
     --primary-color: #3b342d;
@@ -23,7 +23,7 @@
     --transition: all 0.3s ease;
 
     --font-primary: "Kreon", serif;
-    --font-heading: "Kavoon", serif;
+    --font-heading: "Fraunces", "Times New Roman", serif;
     --font-brand: "Inter", system-ui, sans-serif;
     --font-accent: "Delius", cursive;
 }
@@ -153,7 +153,7 @@ header {
    =========================== */
 .section-title {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 38px;
     margin-bottom: 16px;
     color: var(--primary-color);

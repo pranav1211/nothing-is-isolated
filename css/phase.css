@@ -97,7 +97,7 @@ main.phase-main {
 
 .phase-title-card h1 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 86px;
     line-height: 0.95;
     margin-bottom: 18px;
@@ -157,7 +157,7 @@ main.phase-main {
     align-items: baseline;
     gap: 16px;
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     color: var(--primary-color);
 }
 
@@ -195,7 +195,7 @@ main.phase-main {
 
 .phase-block h2 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 36px;
     color: var(--primary-color);
     margin-bottom: 14px;
@@ -204,7 +204,7 @@ main.phase-main {
 
 .phase-block h3 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 26px;
     color: var(--primary-color);
     margin-top: 20px;
@@ -327,7 +327,7 @@ main.phase-main {
 
 .prompt-card blockquote {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 28px;
     line-height: 1.25;
     color: var(--secondary-color);
@@ -432,7 +432,7 @@ main.phase-main {
 
 .look-again h1 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 60px;
     line-height: 1;
     margin-bottom: 16px;

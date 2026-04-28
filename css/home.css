@@ -39,7 +39,7 @@ main {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 78px;
     line-height: 0.95;
     color: var(--primary-color);
@@ -96,7 +96,7 @@ main {
 
 .pre-read h2 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 38px;
     color: var(--primary-color);
     line-height: 1.1;
@@ -158,7 +158,7 @@ main {
 
 .disclaimer h2 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 42px;
     line-height: 1.05;
     margin-bottom: 12px;
@@ -334,7 +334,7 @@ main {
 
 .how-card h3 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 26px;
     color: var(--primary-color);
     margin-bottom: 10px;
@@ -374,7 +374,7 @@ main {
 
 .closing-cta h2 {
     font-family: var(--font-heading);
-    font-weight: 100;
+    font-weight: 400;
     font-size: 44px;
     color: var(--primary-color);
     margin-bottom: 14px;
