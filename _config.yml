@@ -1,0 +1,9 @@
+theme: minima
+title: Nothing is Isolated
+description: A Self-Learning Foundation for Visual Communication Students
+show_excerpts: false
+
+# Ensures SVGs render inline in Markdown
+markdown: kramdown
+kramdown:
+  input: GFM

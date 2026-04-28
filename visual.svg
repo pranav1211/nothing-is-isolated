@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Georgia, 'Times New Roman', serif">
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#F7F3EC"/>
+      <stop offset="100%" stop-color="#EAE3D6"/>
+    </radialGradient>
+
+    <filter id="paper" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.7  0 0 0 0 0.65  0 0 0 0 0.55  0 0 0 0.06 0" result="colorednoise"/>
+      <feComposite in="colorednoise" in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect width="800" height="560" fill="transparent" filter="url(#paper)"/>
+
+  <!-- Faint grid -->
+  <g opacity="0.06" stroke="#8B7A60" stroke-width="0.5">
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="280" x2="800" y2="280"/>
+    <line x1="0" y1="420" x2="800" y2="420"/>
+    <line x1="200" y1="0" x2="200" y2="560"/>
+    <line x1="400" y1="0" x2="400" y2="560"/>
+    <line x1="600" y1="0" x2="600" y2="560"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- DENSE CLUSTER — centre-left, around Junction (340,200)       -->
+  <!-- Many lines converge here. This is where things get complex.  -->
+  <!-- ============================================================ -->
+
+  <!-- LINE 1 — RED — main east-west, THICKER than before (dominant artery) -->
+  <polyline points="80,200 200,200 340,200 480,200 620,200 720,200"
+            stroke="#C0392B" stroke-width="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.88"/>
+
+  <!-- LINE 2 — BLUE — northwest to southeast, medium weight -->
+  <polyline points="120,100 200,200 340,310 460,390 560,460"
+            stroke="#2471A3" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+
+  <!-- LINE 3 — GREEN — vertical spine, slightly thinner east of Junction -->
+  <!-- North segment: normal -->
+  <line x1="340" y1="80" x2="340" y2="200" stroke="#1E8449" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+  <!-- South segment: slightly thinner — less traffic -->
+  <line x1="340" y1="200" x2="340" y2="310" stroke="#1E8449" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+  <line x1="340" y1="310" x2="340" y2="420" stroke="#1E8449" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  <line x1="340" y1="420" x2="340" y2="510" stroke="#1E8449" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- LINE 4 — AMBER — loop route, slightly irregular, not quite orthogonal -->
+  <!-- Deliberate slight deviation: R is at 508,118 not 500,110 — just off grid -->
+  <polyline points="200,100 340,80 508,118 620,200 600,340 460,390 300,400 160,320 140,200 200,100"
+            stroke="#B7950B" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
+
+  <!-- LINE 5 — PURPLE — branch, thin, low traffic -->
+  <polyline points="200,200 200,320 300,400"
+            stroke="#7D3C98" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.68"/>
+
+  <!-- LINE 6 — TEAL — connector, medium -->
+  <polyline points="480,200 520,290 460,390"
+            stroke="#0E8080" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+
+  <!-- ============================================================ -->
+  <!-- DENSE CLUSTER EXTRAS — additional lines near Junction (340,200) -->
+  <!-- These make the centre-left feel busier, more complex          -->
+  <!-- ============================================================ -->
+
+  <!-- Extra line 7 — RUST — short connector, Junction to a nearby node -->
+  <!-- Junction(340,200) → NewNode(270,260) → Midpoint(340,310) -->
+  <polyline points="340,200 268,258 340,310"
+            stroke="#A04020" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.60"/>
+
+  <!-- Extra line 8 — SLATE — very thin, barely there, Junction area -->
+  <!-- Junction(340,200) → OffNode(290,155) → Central(200,200) -->
+  <!-- This is an irregular connection — slightly unexpected diagonal -->
+  <polyline points="340,200 291,152 200,200"
+            stroke="#5D6D7E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"
+            stroke-dasharray="6,4"/>
+
+  <!-- Extra line 9 — DARK GOLD — short spur, Junction to nearby cluster node -->
+  <line x1="340" y1="200" x2="390" y2="248" stroke="#8B6914" stroke-width="2.5" stroke-linecap="round" opacity="0.50"/>
+
+  <!-- ============================================================ -->
+  <!-- IRREGULAR CONNECTION — the one that "shouldn't" be there     -->
+  <!-- A diagonal skip: Central(200,200) directly to Midpoint(340,310) -->
+  <!-- Bypasses Junction entirely — unusual, slightly off            -->
+  <!-- ============================================================ -->
+  <line x1="200" y1="200" x2="340" y2="310"
+        stroke="#8B7355" stroke-width="2" stroke-linecap="round" opacity="0.38"
+        stroke-dasharray="4,5"/>
+
+  <!-- ANOTHER IRREGULAR — thin long diagonal, East End to Confluence -->
+  <!-- Skips several nodes. Visually slightly wrong. -->
+  <line x1="720" y1="200" x2="460" y2="390"
+        stroke="#8B7355" stroke-width="1.5" stroke-linecap="round" opacity="0.28"
+        stroke-dasharray="3,6"/>
+
+  <!-- ============================================================ -->
+  <!-- FRAGILE CONNECTION — Harbour(340,510) to South Wharf(560,460) -->
+  <!-- Two peripheral nodes. One thin line between them.            -->
+  <!-- No redundancy. No alternative route. Barely holding.         -->
+  <!-- Long dash gaps — the line itself looks uncertain.            -->
+  <!-- ============================================================ -->
+  <line x1="340" y1="510" x2="560" y2="460"
+        stroke="#8B7355" stroke-width="1"
+        stroke-linecap="round" opacity="0.35"
+        stroke-dasharray="2,9"/>
+
+  <!-- ============================================================ -->
+  <!-- SPARSE EAST ZONE — fewer lines, simpler, open               -->
+  <!-- East of Crossroads(620,200) feels quieter by contrast       -->
+  <!-- ============================================================ -->
+
+  <!-- ============================================================ -->
+  <!-- INTERCHANGE NODES — SIZED BY IMPORTANCE                      -->
+  <!-- ============================================================ -->
+
+  <!-- Junction (340,200) — LARGEST, densest hub, everything crosses here -->
+  <circle cx="340" cy="200" r="18" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="3"/>
+  <circle cx="340" cy="200" r="9" fill="#3D2B1A"/>
+
+  <!-- Central (200,200) — major, but slightly smaller than Junction -->
+  <circle cx="200" cy="200" r="15" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="7" fill="#3D2B1A"/>
+
+  <!-- Crossroads (620,200) — major, east side -->
+  <circle cx="620" cy="200" r="14" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="2.5"/>
+  <circle cx="620" cy="200" r="6.5" fill="#3D2B1A"/>
+
+  <!-- Midpoint (340,310) — significant but smaller than Junction -->
+  <circle cx="340" cy="310" r="13" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="2.5"/>
+  <circle cx="340" cy="310" r="6" fill="#3D2B1A"/>
+
+  <!-- Confluence (460,390) — medium hub -->
+  <circle cx="460" cy="390" r="13" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="2"/>
+  <circle cx="460" cy="390" r="6" fill="#3D2B1A"/>
+
+  <!-- Bridge (480,200) — medium -->
+  <circle cx="480" cy="200" r="11" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="2"/>
+  <circle cx="480" cy="200" r="5" fill="#3D2B1A"/>
+
+  <!-- Dense cluster small nodes near Junction -->
+  <!-- OffNode on slate dashed line (291,152) -->
+  <circle cx="291" cy="152" r="7" fill="#F7F3EC" stroke="#5D6D7E" stroke-width="1.5" opacity="0.75"/>
+
+  <!-- NewNode on rust line (268,258) -->
+  <circle cx="268" cy="258" r="7" fill="#F7F3EC" stroke="#A04020" stroke-width="1.5" opacity="0.75"/>
+
+  <!-- Spur node (390,248) -->
+  <circle cx="390" cy="248" r="6" fill="#F7F3EC" stroke="#8B6914" stroke-width="1.5" opacity="0.65"/>
+
+  <!-- South Wharf — fragile peripheral, ring only, no fill dot, visually lighter than other termini -->
+  <circle cx="560" cy="460" r="7" fill="#F7F3EC" stroke="#8B7355" stroke-width="1.2" opacity="0.55"/>
+
+  <!-- All other regular nodes -->
+  <circle cx="340" cy="80" r="9" fill="#F7F3EC" stroke="#1E8449" stroke-width="2.5"/>
+  <circle cx="340" cy="420" r="8" fill="#F7F3EC" stroke="#1E8449" stroke-width="2" opacity="0.8"/>
+  <circle cx="340" cy="510" r="7" fill="#F7F3EC" stroke="#1E8449" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="200" cy="100" r="9" fill="#F7F3EC" stroke="#B7950B" stroke-width="2.5"/>
+  <circle cx="508" cy="118" r="9" fill="#F7F3EC" stroke="#B7950B" stroke-width="2.5"/>
+  <circle cx="600" cy="340" r="9" fill="#F7F3EC" stroke="#B7950B" stroke-width="2"/>
+  <circle cx="300" cy="400" r="10" fill="#F7F3EC" stroke="#3D2B1A" stroke-width="2"/>
+  <circle cx="300" cy="400" r="4.5" fill="#3D2B1A"/>
+  <circle cx="160" cy="320" r="9" fill="#F7F3EC" stroke="#B7950B" stroke-width="2"/>
+  <circle cx="140" cy="200" r="9" fill="#F7F3EC" stroke="#B7950B" stroke-width="2"/>
+  <circle cx="200" cy="320" r="8" fill="#F7F3EC" stroke="#7D3C98" stroke-width="2"/>
+  <circle cx="520" cy="290" r="8" fill="#F7F3EC" stroke="#0E8080" stroke-width="2"/>
+
+  <!-- ============================================================ -->
+  <!-- LABELS -->
+  <!-- ============================================================ -->
+
+  <g font-size="10.5" fill="#3D2B1A" opacity="0.75">
+
+    <!-- Major hubs — slightly bolder -->
+    <text x="340" y="180" text-anchor="middle" font-size="12" font-weight="bold" opacity="0.95">Junction</text>
+    <text x="200" y="184" text-anchor="middle" font-size="11" font-weight="bold" opacity="0.9">Central</text>
+    <text x="620" y="184" text-anchor="middle" font-size="11" font-weight="bold" opacity="0.9">Crossroads</text>
+    <text x="340" y="328" text-anchor="middle" font-size="11" font-weight="bold" opacity="0.9">Midpoint</text>
+    <text x="460" y="408" text-anchor="middle" font-size="11" font-weight="bold" opacity="0.9">Confluence</text>
+
+    <!-- Dense cluster labels — close together, slightly crowded by design -->
+    <text x="291" y="141" text-anchor="middle" font-size="9.5" opacity="0.65">Overway</text>
+    <text x="268" y="272" text-anchor="middle" font-size="9.5" opacity="0.65">Indent</text>
+    <text x="398" y="262" text-anchor="middle" font-size="9.5" opacity="0.60">Spur</text>
+    <text x="480" y="188" text-anchor="middle" font-size="10">Bridge</text>
+
+    <!-- Termini and peripherals -->
+    <text x="80" y="216" text-anchor="middle">West End</text>
+    <text x="720" y="216" text-anchor="middle">East End</text>
+    <text x="120" y="116" text-anchor="middle">North Gate</text>
+    <text x="560" y="476" text-anchor="middle">South Wharf</text>
+    <text x="340" y="68" text-anchor="middle">Uptown</text>
+    <text x="340" y="436" text-anchor="middle" font-size="10" opacity="0.7">Riverside</text>
+    <text x="340" y="527" text-anchor="middle" font-size="10" opacity="0.55">Harbour</text>
+    <text x="508" y="106" text-anchor="middle">Heights</text>
+    <text x="200" y="88" text-anchor="middle">Old Town</text>
+    <text x="600" y="328" text-anchor="middle">Eastpark</text>
+    <text x="156" y="308" text-anchor="middle">Westpark</text>
+    <text x="140" y="188" text-anchor="middle">Corner</text>
+    <text x="300" y="418" text-anchor="middle">Market</text>
+    <text x="200" y="338" text-anchor="middle">Arcade</text>
+    <text x="520" y="278" text-anchor="middle">Overpass</text>
+
+  </g>
+
+  <!-- Line colour legend — bottom right -->
+  <g opacity="0.65">
+    <rect x="590" y="490" width="12" height="12" rx="2" fill="#C0392B"/>
+    <rect x="608" y="490" width="12" height="12" rx="2" fill="#2471A3"/>
+    <rect x="626" y="490" width="12" height="12" rx="2" fill="#1E8449"/>
+    <rect x="644" y="490" width="12" height="12" rx="2" fill="#B7950B"/>
+    <rect x="662" y="490" width="12" height="12" rx="2" fill="#7D3C98"/>
+    <rect x="680" y="490" width="12" height="12" rx="2" fill="#0E8080"/>
+  </g>
+
+  <!-- Title -->
+  <text x="32" y="537" font-family="Georgia, serif" font-size="11" fill="#6B5B3E" opacity="0.38" letter-spacing="2.5">NOTHING IS ISOLATED</text>
+
+</svg>

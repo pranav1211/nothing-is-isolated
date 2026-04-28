@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Georgia, 'Times New Roman', serif">
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#F7F3EC"/>
+      <stop offset="100%" stop-color="#EAE3D6"/>
+    </radialGradient>
+
+    <filter id="paper" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.7  0 0 0 0 0.65  0 0 0 0 0.55  0 0 0 0.06 0" result="colorednoise"/>
+      <feComposite in="colorednoise" in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect width="800" height="560" fill="transparent" filter="url(#paper)"/>
+
+  <!-- Faint grid — same as original -->
+  <g opacity="0.06" stroke="#8B7A60" stroke-width="0.5">
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="280" x2="800" y2="280"/>
+    <line x1="0" y1="420" x2="800" y2="420"/>
+    <line x1="200" y1="0" x2="200" y2="560"/>
+    <line x1="400" y1="0" x2="400" y2="560"/>
+    <line x1="600" y1="0" x2="600" y2="560"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- GHOST HINTS — subliminal, some students will notice          -->
+  <!-- Drawn BEFORE lines so they sit underneath everything         -->
+  <!-- ============================================================ -->
+
+  <!-- GHOST 1 — faint closed loop shape                           -->
+  <!-- Traces the amber loop route as a soft filled region         -->
+  <!-- Not a line — a whisper of enclosed space                    -->
+  <polygon points="200,100 340,80 508,118 620,200 600,340 460,390 300,400 160,320 140,200"
+           fill="#9B9080" fill-opacity="0.045" stroke="none"/>
+
+  <!-- Ghost loop outline — barely a stroke, just enough to sense closure -->
+  <polygon points="200,100 340,80 508,118 620,200 600,340 460,390 300,400 160,320 140,200"
+           fill="none" stroke="#8B8070" stroke-width="0.7" stroke-opacity="0.12"
+           stroke-linejoin="round"/>
+
+  <!-- GHOST 2 — slightly denser region around Junction            -->
+  <!-- A radial softness, like heat or pressure accumulating there -->
+  <!-- Two concentric rings, almost invisible                      -->
+  <circle cx="310" cy="220" r="72"
+          fill="#9B9080" fill-opacity="0.032" stroke="none"/>
+  <circle cx="310" cy="220" r="42"
+          fill="#9B9080" fill-opacity="0.028" stroke="none"/>
+
+  <!-- ============================================================ -->
+  <!-- ALL LINES — same geometry, colour stripped to neutral grey   -->
+  <!-- All stroke weights equalised — student reads structure only  -->
+  <!-- ============================================================ -->
+
+  <!-- LINE 1 — east-west -->
+  <polyline points="80,200 200,200 340,200 480,200 620,200 720,200"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- LINE 2 — northwest to southeast -->
+  <polyline points="120,100 200,200 340,310 460,390 560,460"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- LINE 3 — vertical, all segments same weight -->
+  <line x1="340" y1="80" x2="340" y2="510"
+        stroke="#9B9080" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- LINE 4 — loop route -->
+  <polyline points="200,100 340,80 508,118 620,200 600,340 460,390 300,400 160,320 140,200 200,100"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- LINE 5 — branch -->
+  <polyline points="200,200 200,320 300,400"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- LINE 6 — teal connector -->
+  <polyline points="480,200 520,290 460,390"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- LINE 7 — rust short connector -->
+  <polyline points="340,200 268,258 340,310"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+
+  <!-- LINE 8 — irregular diagonal, kept dashed so structure is preserved -->
+  <polyline points="340,200 291,152 200,200"
+            stroke="#9B9080" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"
+            stroke-dasharray="5,4"/>
+
+  <!-- LINE 9 — spur -->
+  <line x1="340" y1="200" x2="390" y2="248"
+        stroke="#9B9080" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- IRREGULAR 1 — bypass, kept dashed -->
+  <line x1="200" y1="200" x2="340" y2="310"
+        stroke="#9B9080" stroke-width="1.8" stroke-linecap="round" opacity="0.30"
+        stroke-dasharray="4,5"/>
+
+  <!-- IRREGULAR 2 — long diagonal, kept dashed -->
+  <line x1="720" y1="200" x2="460" y2="390"
+        stroke="#9B9080" stroke-width="1.8" stroke-linecap="round" opacity="0.25"
+        stroke-dasharray="3,6"/>
+
+  <!-- FRAGILE CONNECTION — same long-gap dash, but same grey as everything else -->
+  <!-- Student has to find it themselves -->
+  <line x1="340" y1="510" x2="560" y2="460"
+        stroke="#9B9080" stroke-width="1.8" stroke-linecap="round" opacity="0.28"
+        stroke-dasharray="2,9"/>
+
+  <!-- ============================================================ -->
+  <!-- ALL NODES — empty rings, uniform size and weight             -->
+  <!-- No hierarchy encoded. Student brings the hierarchy.          -->
+  <!-- ============================================================ -->
+
+  <!-- Major hubs — same ring as everything else -->
+  <circle cx="340" cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="200" cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="620" cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="340" cy="310" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="460" cy="390" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="480" cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Dense cluster nodes -->
+  <circle cx="291" cy="152" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="268" cy="258" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="390" cy="248" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Peripheral and terminus nodes -->
+  <circle cx="80"  cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="720" cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="120" cy="100" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="560" cy="460" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="340" cy="80"  r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="340" cy="420" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="340" cy="510" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="200" cy="100" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="508" cy="118" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="600" cy="340" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="300" cy="400" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="160" cy="320" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="140" cy="200" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="200" cy="320" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="520" cy="290" r="10" fill="#F7F3EC" stroke="#9B9080" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- ============================================================ -->
+  <!-- LABELS — same names, same positions, reduced opacity         -->
+  <!-- Present but quiet — student can ignore or use as anchor      -->
+  <!-- ============================================================ -->
+
+  <g font-size="10.5" fill="#8B8070" opacity="0.55">
+    <text x="340" y="180"  text-anchor="middle" font-size="10.5">Junction</text>
+    <text x="200" y="184"  text-anchor="middle" font-size="10.5">Central</text>
+    <text x="620" y="184"  text-anchor="middle" font-size="10.5">Crossroads</text>
+    <text x="340" y="328"  text-anchor="middle" font-size="10.5">Midpoint</text>
+    <text x="460" y="408"  text-anchor="middle" font-size="10.5">Confluence</text>
+    <text x="291" y="141"  text-anchor="middle" font-size="9.5">Overway</text>
+    <text x="268" y="272"  text-anchor="middle" font-size="9.5">Indent</text>
+    <text x="398" y="262"  text-anchor="middle" font-size="9.5">Spur</text>
+    <text x="480" y="188"  text-anchor="middle" font-size="9.5">Bridge</text>
+    <text x="80"  y="216"  text-anchor="middle" font-size="9.5">West End</text>
+    <text x="720" y="216"  text-anchor="middle" font-size="9.5">East End</text>
+    <text x="120" y="116"  text-anchor="middle" font-size="9.5">North Gate</text>
+    <text x="560" y="476"  text-anchor="middle" font-size="9.5">South Wharf</text>
+    <text x="340" y="68"   text-anchor="middle" font-size="9.5">Uptown</text>
+    <text x="340" y="436"  text-anchor="middle" font-size="9.5">Riverside</text>
+    <text x="340" y="527"  text-anchor="middle" font-size="9.5">Harbour</text>
+    <text x="508" y="106"  text-anchor="middle" font-size="9.5">Heights</text>
+    <text x="200" y="88"   text-anchor="middle" font-size="9.5">Old Town</text>
+    <text x="600" y="328"  text-anchor="middle" font-size="9.5">Eastpark</text>
+    <text x="156" y="308"  text-anchor="middle" font-size="9.5">Westpark</text>
+    <text x="140" y="188"  text-anchor="middle" font-size="9.5">Corner</text>
+    <text x="300" y="418"  text-anchor="middle" font-size="9.5">Market</text>
+    <text x="200" y="338"  text-anchor="middle" font-size="9.5">Arcade</text>
+    <text x="520" y="278"  text-anchor="middle" font-size="9.5">Overpass</text>
+  </g>
+
+  <!-- Annotation prompt -->
+  <text x="32" y="516" font-family="Georgia, serif" font-size="9.5" fill="#9B9080" opacity="0.45" letter-spacing="1">Add anything that helps you see the system more clearly:</text>
+  <text x="32" y="529" font-family="Georgia, serif" font-size="9.5" fill="#9B9080" opacity="0.38" letter-spacing="1">Arrows where you sense movement · Circles where something repeats · Marks where you would intervene</text>
+
+  <!-- Title — same as original, same position -->
+  <text x="32" y="537" font-family="Georgia, serif" font-size="11" fill="#6B5B3E" opacity="0.28" letter-spacing="2.5">NOTHING IS ISOLATED</text>
+
+</svg>
