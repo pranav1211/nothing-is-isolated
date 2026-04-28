@@ -260,10 +260,12 @@ main {
 
 .phase-num {
     font-family: var(--font-brand);
+    font-weight: 800;
     font-size: 64px;
     color: var(--primary-color);
     line-height: 0.9;
-    opacity: 0.9;
+    opacity: 0.85;
+    letter-spacing: -0.04em;
 }
 
 .phase-name {

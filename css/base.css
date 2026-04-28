@@ -3,7 +3,7 @@
    Loosely based on the BeyondMeBtw design system
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Delius&family=Kavoon&family=Kreon:wght@300..700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Inter:wght@600;700;800&family=Kavoon&family=Kreon:wght@300..700&display=swap');
 
 :root {
     --primary-color: #3b342d;
@@ -24,7 +24,7 @@
 
     --font-primary: "Kreon", serif;
     --font-heading: "Kavoon", serif;
-    --font-brand: "Permanent Marker", cursive;
+    --font-brand: "Inter", system-ui, sans-serif;
     --font-accent: "Delius", cursive;
 }
 
@@ -68,12 +68,13 @@ header {
 
 #name {
     font-family: var(--font-brand);
-    font-weight: 400;
-    font-size: 46px;
+    font-weight: 800;
+    font-size: 42px;
     margin-top: 18px;
     margin-left: 55px;
     color: var(--primary-color);
     line-height: 1;
+    letter-spacing: -0.02em;
 }
 
 #name a {

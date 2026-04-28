@@ -49,9 +49,11 @@ main.phase-main {
 .phase-rail a .num {
     display: block;
     font-family: var(--font-brand);
+    font-weight: 800;
     font-size: 18px;
     line-height: 1;
     margin-bottom: 2px;
+    letter-spacing: -0.02em;
 }
 
 /* ===========================
@@ -86,9 +88,11 @@ main.phase-main {
 
 .phase-title-card .num {
     font-family: var(--font-brand);
+    font-weight: 800;
     font-size: 90px;
     line-height: 0.85;
     margin-bottom: 4px;
+    letter-spacing: -0.04em;
 }
 
 .phase-title-card h1 {
